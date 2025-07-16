@@ -1,4 +1,4 @@
-# Multi-SIS-Instance-Segmentation-by-YOLACT-DoublePlus
+# Multi-SIS-Instance-Segmentation-by-YOLACT++
 
 This repository contains code and results for **instance segmentation** of surgical instruments using **YOLACT++ (ResNet-50)** on a custom dataset.
 
@@ -52,7 +52,7 @@ run_inference_on_random_images(num_images=12)
 
 📌 Example:
 
-![Example Results](./detectron2_maskrcnn_results_sample.png)
+![Example Results](./YOLACT++_results_sample.png)
 
 ## 📦 Files
 
