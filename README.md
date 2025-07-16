@@ -18,37 +18,33 @@ This repository contains code and results for **instance segmentation** of surgi
 
 ## 🏗 Model & Training
 
-- **Model:** `mask_rcnn_R_101_FPN_3x.yaml`
-- **Backbone:** ResNet-101 + FPN
-- **Epochs:** 30
-- **Framework:** Detectron2
-- **Score Threshold:** 0.7
-- **NMS Threshold:** 0.4
+- **Model:** `YOLACT++`
+- **Backbone:** resnet50_dcnv2_backbone
+- **Epochs:** 20
+- **Framework:** PyTorch
+- **Score Threshold:** 0.5
+- **top_k:** 10
 
 ### 💡 Evaluation
 
-**Bounding Box (bbox):**
-- mAP@[0.50:0.95]: `67.6%`
-- AP50: `83.4%`
-- Best class: `Trocar` (77.9%), `Harmonic_Ace` (75.9%)
-- Worst class: `Suction` (50.6%)
-
 **Segmentation (segm):**
-- mAP@[0.50:0.95]: `65.9%`
-- AP50: `83.9%`
-- Best class: `Trocar` (80.1%)
-- Worst class: `Suction` (50.1%)
+- mAP@[0.50:0.95]: `67.8%` 
+- AP50: `82.7%` 
+- Best class: `Harmonic_Ace` (0.9057 F1)
+- Worst class: `Suction` (0.6816 F1)
+- Average P,R,F1: `0.8275,  0.8500,  0.8385`          
 
 ## 🔍 Inference
 
 To run inference and visualize N random samples from validation set:
 
 ```python
-run_inference_on_random_images(num_images=12)
+visualize_inference_grid(n_images=15)
 ```
 
 - Colors are fixed per class
-- Results shown in 4-column grid
+- Results shown in 6-column grid
+- GT Overlay Vs. Prediction
 
 📌 Example:
 
@@ -64,7 +60,7 @@ run_inference_on_random_images(num_images=12)
 
 - Python 3.11
 - PyTorch
-- Detectron2
+- DCNv2
 
 ## 📜 License
 
