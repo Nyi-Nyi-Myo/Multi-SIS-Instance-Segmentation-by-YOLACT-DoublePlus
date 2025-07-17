@@ -24,6 +24,7 @@ This repository contains code and results for **instance segmentation** of surgi
 - **Framework:** PyTorch
 - **Score Threshold:** 0.5
 - **top_k:** 10
+- **nms_thresh:** 0.4
 
 ### 💡 Evaluation
 
